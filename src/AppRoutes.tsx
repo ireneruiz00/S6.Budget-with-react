@@ -7,6 +7,7 @@ function AppRoutes() {
   return (
     <section>
         <Routes>
+            <Route path='/' element={<Home/>}></Route>
             <Route path='/home' element={<Home/>}></Route>
             <Route path='/budget-calculator' element={<Budgetpage/>}></Route>
             <Route path='/current-budgets' element={<CurrentBudgetspage/>}></Route>

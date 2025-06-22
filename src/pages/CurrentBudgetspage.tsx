@@ -1,8 +1,9 @@
+import Header from "../components/organisms/Header"
 
 
 function CurrentBudgetspage() {
   return (
-    <div>CurrentBudgetspage</div>
+    <Header/>
   )
 }
 

@@ -1,8 +1,9 @@
+import Header from "../components/organisms/Header"
 
 
 function Home() {
   return (
-    <div>Home</div>
+    <Header/>
   )
 }
 
