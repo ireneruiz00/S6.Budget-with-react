@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function Navbar() {
   return (
-    <nav className="flex space-x-6 text-white text-lg font-semibold">
-      <Link to='/home' className="text-[#CB0A36] hover: overline transition">Home</Link>
-      <Link to='/budget-calculator'>Services</Link>
-      <Link to='/current-budgets'>My budgets</Link>
+    <nav className="flex space-x-6 text-lg text-[#571E27] font-semibold hover:transition">
+      <NavLink to="/" className={({ isActive }) => isActive ? "underline" : ""}>Home</NavLink>
+      <NavLink to="/budget-calculator" className={({ isActive }) => isActive ? "underline" : ""}>Services</NavLink>
+      <NavLink to="/current-budgets" className={({ isActive }) => isActive ? "underline" : ""}>My budgets</NavLink>
     </nav>
     
   )

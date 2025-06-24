@@ -1,9 +1,11 @@
-import Header from "../components/organisms/Header"
+import Calculator from "../components/organisms/Calculator"
 
 
 function Budgetpage() {
   return (
-    <Header/>
+    <>
+      <Calculator/>
+    </>
   )
 }
 
