@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 
 :root {
-  font-family: "Molle", cursive;
-  font-weight: 400;
-  font-style: italic;
+  font-family: "Lobster", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
