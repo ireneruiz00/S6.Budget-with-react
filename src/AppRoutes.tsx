@@ -10,7 +10,7 @@ function AppRoutes() {
         <Routes>
             <Route path='/' element={<Layout/>}>
               <Route index element={<Home/>}/>
-              <Route path='/budget-calculator' element={<Budgetpage/>}/>
+              <Route path='/services' element={<Budgetpage/>}/>
               <Route path='/current-budgets' element={<CurrentBudgetspage/>}/>
             </Route>
         </Routes>
