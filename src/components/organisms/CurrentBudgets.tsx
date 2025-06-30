@@ -1,7 +1,10 @@
+import CurrentCards from "../molecules/CurrentCards"
 
 function CurrentBudgets() {
   return (
-    <div>CurrentBudgets</div>
+    <>
+    <CurrentCards/>
+    </>
   )
 }
 
