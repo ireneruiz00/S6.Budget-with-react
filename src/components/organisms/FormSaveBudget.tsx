@@ -45,6 +45,7 @@ function FormSaveBudget({ selectedServices, total }: Props) {
       phone,
       services: selectedServices,
       total,
+      date: new Date()
     };
 
     addBudget(newBudget)

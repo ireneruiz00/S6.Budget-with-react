@@ -1,7 +1,10 @@
-import { useBudgetContext } from "../../context/BudgetContext";
+import type { Budget } from "../../types/Types";
 
-function CurrentCards() {
-  const { budgets } = useBudgetContext();
+interface Props {
+  budgets: Budget[];
+}
+
+function CurrentCards({ budgets }: Props) {
 
   if (budgets.length === 0) return <p className="text-center mt-50">No budgets yet.</p>;
 

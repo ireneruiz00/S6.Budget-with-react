@@ -7,7 +7,7 @@ interface Props {
   onInfoClick: () => void;
 }
 
-function QuantityInput( {label, value, onIncrement, onDecrement, onInfoClick }: Props) {
+function QuantityInput({label, value, onIncrement, onDecrement, onInfoClick}: Props) {
   return (
     <div className="flex items-center gap-2 mb-2">
       <button type="button" onClick={onInfoClick}

@@ -1,14 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
+import type { Budget } from "../types/Types";
 
-interface Budget {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  services: string[];
-  total: number;
-}
 
 interface BudgetContextType {
   budgets: Budget[];
