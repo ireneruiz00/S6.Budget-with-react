@@ -17,7 +17,7 @@ function CardsServices({services, selectedServices, onToggle}: Props) {
             selectedServices.includes(service.id) ? "bg-rose-100" : ""
           }`}
         >
-          <h3 className="text-xl font-semibold text-[#571E27]">{service.title}</h3>
+          <h2 className="text-4xl mb-4 font-semibold text-[#571E27]">{service.title}</h2>
           <p className="text-sm text-[#571E27]">{service.description}</p>
           <p className="font-bold mt-2 text-[#571E27]">{service.price} €</p>
           <label className="inline-flex items-center mt-2">
