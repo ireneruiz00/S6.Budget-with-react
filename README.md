@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# BUDGET GENERATOR WEB APP (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dynamic web app to generate service budgets using React. 
+The users can select multiple services, fill the clients' data and save the budgets generated, as well as sharing the url of a budget. The budgets' list can be sorted by name, date and import and you can also search by name. 
+The app uses components, organized following the principles of atomic design, and routing via react-router-dom.
 
-Currently, two official plugins are available:
+# Demo
+![Budget App Home page screenshot](./public/home.PNG)
+![Budget App Services page screenshot](./public/services.PNG)
+![Budget App Services functionalities activated screenshot](./public/servicesActive.PNG)
+![Budget App My budgets page screenshot](./public/myBudgets.PNG)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19**
+- **Typescript**
+- **Vite** for fast dev environment
+- **ESLint** for linting
+- **Tailwind CSS** for utility-first styling
+    - Includes @tailwindcss/forms if used
+    - Uses clsx for conditional class names
+- **Atomic Design** structure
+- **React Router DOM**
+- **uuid** for generating unique IDs
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Intallation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Follow these steps to get the project running locally:
+```bash
+# 1. Clone the repository
+git clone https://github.com/ireneruiz00/S6.Budget-with-react.git
+cd S6.Budget-with-react
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
 ```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Navigate to the services page
+Select the desired services and your preference in payment frequency
+If Web Design is selected, explore the web options
+Fill out the form and save your budget
+Go to the budget list page to view saved budgets
+Use the buttons to sort by name, date or import the order
+Use the search input
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# What I learned
+
+How to set up a modern React project with Vite, ensuring fast development builds and hot reloading.
+Using TypeScript for type safety and better development experience.
+Structuring components, hooks, and context for clean, reusable code.
+Leveraging Tailwind CSS to create responsive, utility-first UIs.
+Managing component states for UI interactions (toggles, forms, active buttons).
+Managing complex UI logic using useState, useEffect, and useContext.
+Using custom hooks (useSelectedServices) for separation of concerns.
+Dynamically updating the UI based on user selections (e.g., services, pricing, quantity).
+Setting up React Router to manage navigation between pages (e.g., Calculator, Budgets).
+Reading and writing search parameters in the URL to create a dynamic, shareable experience.
