@@ -6,11 +6,16 @@ export const useSelectedServices = () => {
   const toggleService = (id: string) => {
     setSelectedServices(prev =>
       prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
-    );
+    )
+  }
+
+  const setInitialServices = (initial: string[]) => {
+    setSelectedServices(initial);
   };
 
   return {
     selectedServices,
-    toggleService
-  };
-};
+    toggleService,
+    setInitialServices
+  }
+}

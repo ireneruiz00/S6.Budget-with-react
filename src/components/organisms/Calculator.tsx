@@ -1,16 +1,29 @@
 import CardsServices from '../molecules/CardsServices'
 import { useSelectedServices } from '../../hooks/useSelectedServices';
 import { services } from '../../data/services';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TotalBudget from '../molecules/TotalBudget';
 import WebOptions from '../molecules/WebOptions';
 import FormSaveBudget from './FormSaveBudget';
+import { useBudgetUrl, useInitialBudgetFromUrl } from '../../hooks/useBudgetUrl';
 
 function Calculator() {
-  const { selectedServices, toggleService } = useSelectedServices();
-  const [pages, setPages] = useState(1);
-  const [languages, setLanguages] = useState(1);
-  const [isAnnual, setIsAnnual] = useState(false)
+  const {
+    initialServices,
+    initialPages,
+    initialLanguages,
+    initialIsAnnual,
+  } = useInitialBudgetFromUrl();
+
+  const { selectedServices, toggleService, setInitialServices } = useSelectedServices();
+  const [pages, setPages] = useState(initialPages);
+  const [languages, setLanguages] = useState(initialLanguages);
+  const [isAnnual, setIsAnnual] = useState(initialIsAnnual);
+
+  useEffect(() => {
+    setInitialServices(initialServices);
+  }, [])
+
 
   const baseTotal = services
     .filter(service => selectedServices.includes(service.id))
@@ -24,7 +37,9 @@ function Calculator() {
   if(isAnnual){
     total = total * 0.8
   }
-  
+
+  useBudgetUrl({ selectedServices, pages, languages, isAnnual })
+
   return (
     <>
       <div className="p-6 max-w-4xl mx-auto">
