@@ -1,12 +1,27 @@
+import { useNavigate } from "react-router-dom";
 import type { Budget } from "../../types/Types";
+import ButtonNavigator from "../atoms/ButtonNavigator";
 
 interface Props {
   budgets: Budget[];
 }
 
 function CurrentCards({ budgets }: Props) {
+  const navigate = useNavigate()
 
-  if (budgets.length === 0) return <p className="text-center mt-50">No budgets yet.</p>;
+  const handleOnClick = () => {
+        navigate("/services");
+  }
+
+  if (budgets.length === 0) 
+    return (
+    <div className="text-center">
+      <p className="mt-20 mb-7 sm:mb-10 text-gray-400/60 text-2xl">No budgets yet</p>
+      <ButtonNavigator onClick={handleOnClick} 
+      textSize= {'text-lg'}
+      text={'Get a Budget'} />
+    </div>
+    )
 
   return (
     <div className="p-6 space-y-4 max-w-5xl mx-auto">

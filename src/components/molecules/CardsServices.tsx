@@ -5,9 +5,10 @@ interface Props {
   services: Service[];
   selectedServices: string[];
   onToggle: (id: string) => void;
+  isAnnual: boolean;
 }
 
-function CardsServices({services, selectedServices, onToggle}: Props) {
+function CardsServices({services, selectedServices, onToggle, isAnnual}: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {services.map(service => (
@@ -29,6 +30,7 @@ function CardsServices({services, selectedServices, onToggle}: Props) {
             />
             Select
           </label>
+          {isAnnual && <p className="text-rose-500">Save a 20%</p>}
         </div>
       ))}
     </div>

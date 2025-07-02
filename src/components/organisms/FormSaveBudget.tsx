@@ -32,7 +32,7 @@ function FormSaveBudget({ selectedServices, total }: Props) {
           !validateEmail(email) ? 'Invalid format (ex: name@gmail.com)': '',
       phone: phone.trim() === '' ? 'This field is required' :
           !validatePhone(phone) ? 'Invalid values': '',
-      services: selectedServices.length === 0 ? 'Select at least a service' : '',
+      services: selectedServices.length === 0 ? 'Select at least one service' : '',
     }
 
   setErrors(newErrors)
