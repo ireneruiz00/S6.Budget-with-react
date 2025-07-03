@@ -41,23 +41,38 @@ npm run dev
 
 # Usage
 
-Navigate to the services page
-Select the desired services and your preference in payment frequency
-If Web Design is selected, explore the web options
-Fill out the form and save your budget
-Go to the budget list page to view saved budgets
-Use the buttons to sort by name, date or import the order
-Use the search input
+  Navigate to the services page
+
+  Select the desired services and your preference in payment frequency
+
+  If Web is selected, explore the web options
+
+  Fill out the form and save your budget
+
+  Go to the budget list page to view saved budgets
+
+  Use the buttons to sort by name, date or import the order
+
+  Use the search input
 
 # What I learned
 
-How to set up a modern React project with Vite, ensuring fast development builds and hot reloading.
-Using TypeScript for type safety and better development experience.
-Structuring components, hooks, and context for clean, reusable code.
-Leveraging Tailwind CSS to create responsive, utility-first UIs.
-Managing component states for UI interactions (toggles, forms, active buttons).
-Managing complex UI logic using useState, useEffect, and useContext.
-Using custom hooks (useSelectedServices) for separation of concerns.
-Dynamically updating the UI based on user selections (e.g., services, pricing, quantity).
-Setting up React Router to manage navigation between pages (e.g., Calculator, Budgets).
-Reading and writing search parameters in the URL to create a dynamic, shareable experience.
+  How to set up a modern React project with Vite, ensuring fast development builds and hot reloading.
+
+  Using TypeScript for type safety and better development experience.
+
+  Structuring components, hooks, and context for clean, reusable code.
+
+  Leveraging Tailwind CSS to create responsive, utility-first UIs.
+
+  Managing component states for UI interactions (toggles, forms, active buttons).
+
+  Managing complex UI logic using useState, useEffect, and useContext.
+
+  Using custom hooks (useSelectedServices) for separation of concerns.
+
+  Dynamically updating the UI based on user selections (e.g., services, pricing, quantity).
+
+  Setting up React Router to manage navigation between pages (e.g., Calculator, Budgets).
+
+  eading and writing search parameters in the URL to create a dynamic, shareable experience.
